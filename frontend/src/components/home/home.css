@@ -1,0 +1,148 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #2e2e2e;
+}
+
+.contenedor-reserva {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.Agregar-Usuario {
+  background-color: #4caf50;
+  color: #fff;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Lista-usuarios {
+  list-style: none;
+  padding: 0;
+}
+
+.Lista-usuarios li {
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Lista-usuarios h2 {
+  margin: 0;
+  color: #333;
+}
+
+.Lista-usuarios p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.boton-editar {
+  background-color: #008cba;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.boton-editar:hover {
+  background-color: #005f75;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.modal-content h2 {
+  text-align: center;
+  color: #333;
+}
+
+.modal-content input,
+.modal-content textarea,
+.modal-content label {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.modal-content textarea {
+  resize: none;
+  height: 80px;
+}
+
+button[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+button[type="button"] {
+  background-color: #f44336;
+  color: #fff;
+  margin-top: 10px;
+}
+
+button[type="button"]:hover {
+  background-color: #e53935;
+}
+
+p[style*="color: red"] {
+  font-size: 12px;
+  margin: -5px 0 10px 0;
+}
