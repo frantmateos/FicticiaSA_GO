@@ -25,7 +25,7 @@ const MisUsuarios = () => {
   const [diabetico, setDiabetico] = useState(false);
   const [enfermedades, setEnfermedades] = useState('');
   const [estado, setEstado] = useState(false);
-
+  
   const openAddDialog = () => {
     setShowAddDialog(true);
     document.body.style.overflow = 'hidden';
@@ -120,6 +120,7 @@ const MisUsuarios = () => {
       setUsers((prevUsers) => [...prevUsers, newUser]);
       setMensaje('Usuario creado exitosamente.');
       closeAddDialog();
+      window.location.reload();
     } catch (error) {
       setMensaje('Error al crear usuario');
       console.error('Error en handleInsertUser:', error.response ? error.response.data : error.message);
@@ -148,6 +149,7 @@ const MisUsuarios = () => {
       );
       setMensaje('Usuario actualizado exitosamente.');
       closeEditDialog();
+      window.location.reload();
     } catch (error) {
       setMensaje('Error al actualizar usuario');
       console.error('Error en handleUpdateUser:', error.response ? error.response.data : error.message);
@@ -157,9 +159,11 @@ const MisUsuarios = () => {
   return (
     <div className="contenedor-reserva">
       <h1>Usuarios</h1>
-      <button className="Agregar-Usuario" onClick={openAddDialog}>
+      {isAdmin && (
+        <button className="Agregar-Usuario" onClick={openAddDialog}>
         Agregar Usuario
-      </button>
+        </button>)}
+      
 
       <ul className="Lista-usuarios">
         {filteredUsers.length > 0 ? (
@@ -182,7 +186,7 @@ const MisUsuarios = () => {
         <div className="modal">
           <form onSubmit={handleInsertUser}>
             <div className="modal-content">
-              <h2>Agregar Nuevo Usuario</h2>
+              <h2>Agregar Nuevo Cliente:</h2>
               <input
                 type="text"
                 value={nombre}
@@ -211,8 +215,9 @@ const MisUsuarios = () => {
                   type="checkbox"
                   checked={maneja}
                   onChange={(e) => setManeja(e.target.checked)}
+                  
                 />
-                Maneja
+               Maneja
               </label>
               <label>
                 <input
