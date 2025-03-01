@@ -56,10 +56,10 @@ export async function getUserById(userId) {
   }
 }
 
-export async function updateUser(userId, { nombre, genero, atributos,maneja, lentes,diabetico, enfermedades }) {
+export async function updateUser(userId, { nombre, genero, atributos,maneja, lentes,diabetico, enfermedades, estado}) {
   try {
     console.log("este id estoy pasando: ", userId)
-    const response = await axios.put(`http://localhost:8080/users`, {id: userId,nombre, genero, atributos,maneja, lentes,diabetico, enfermedades }, {
+    const response = await axios.put(`http://localhost:8080/users`, {id: userId,nombre, genero, atributos,maneja, lentes,diabetico, enfermedades,estado }, {
       headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
     });
     return response.data;

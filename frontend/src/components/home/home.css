@@ -58,12 +58,12 @@ button:hover {
 }
 
 .Lista-usuarios h2 {
-  margin: 0;
+  margin: 10px;
   color: #333;
 }
 
 .Lista-usuarios p {
-  margin: 5px 0;
+  margin: 5px ;
   color: #555;
 }
 
@@ -105,6 +105,8 @@ button:hover {
   color: #333;
 }
 
+
+
 .modal-content input,
 .modal-content textarea,
 .modal-content label {
@@ -115,6 +117,7 @@ button:hover {
   border-radius: 5px;
   border: 1px solid #ddd;
   font-size: 14px;
+  color: #2e2e2e;
 }
 
 .modal-content textarea {

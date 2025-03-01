@@ -22,10 +22,10 @@ type Controller interface {
 func main() {
 
 	sqlconfig := repo.MySQLConfig{
-		Name: "X",
-		User: "X",
-		Pass: "X",
-		Host: "X",
+		Name: "users",
+		User: "root",
+		Pass: "Tomas1927",
+		Host: "localhost",
 	}
 
 	mainRepo := repo.NewSql(sqlconfig)
