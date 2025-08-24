@@ -1,6 +1,7 @@
 package usersController
 
 import (
+	"fmt"
 	"strconv"
 	"strings"
 
@@ -67,6 +68,7 @@ func (controller Controller) Extrac(c *gin.Context) {
 }
 
 func (controller Controller) GetUserByName(c *gin.Context) {
+	fmt.Println("llego al controller")
 
 	var userDomain Domain.UserData
 	c.BindJSON(&userDomain)
