@@ -71,6 +71,7 @@ const MisUsuarios = () => {
 
   useEffect(() => {
     const fetchRole = async () => {
+      print("Cambio numero 1")
       try {
         const role = await tokenRole();
         setRole(role);
